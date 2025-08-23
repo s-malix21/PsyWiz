@@ -1,0 +1,75 @@
+🔧 Initializing LlamaIndex RAG Engine...
+🤖 Initializing Google AI Studio LLM: gemini-2.0-flash
+C:\Users\Lenovo\AppData\Local\Temp\ipykernel_36344\2534760600.py:71: DeprecationWarning: Call to deprecated class Gemini. (Should use `llama-index-llms-google-genai` instead, using Google's latest unified SDK. See: https://docs.llamaindex.ai/en/stable/examples/llm/google_genai/)
+  Settings.llm = Gemini(
+📊 Loading embedding model...
+🗄️ Connecting to ChromaDB...
+📚 Found 87 documents
+✅ LlamaIndex RAG Engine ready!
+
+============================================================
+🧪 TESTING LLAMAINDEX RAG PIPELINE
+============================================================
+🔍 Processing query: What is the association between household dietary diversity and depression symptoms in adolescents from rural Pakistan?
+📖 Retrieved 5 relevant chunks
+📊 TOKEN ANALYSIS:
+   • Context tokens: ~1,283
+   • Response tokens: ~45
+   • Total tokens: ~1,328
+
+🤖 **Answer** (Confidence: 0.76):
+--------------------------------------------------
+The study found that adolescents from households with higher dietary diversity had lower symptoms of depression (IRRs: 0.91-0.96) in rural Pakistan (article_3.md, chunk_index: 1).
+
+
+📚 **Sources** (5 chunks):
+1. article_3 - Score: 0.681
+2. article_3 - Score: 0.675
+3. article_3 - Score: 0.608
+4. article_3 - Score: 0.604
+5. article_3 - Score: 0.586
+
+
+============================================================
+🧪 TESTING LLAMAINDEX RAG PIPELINE
+============================================================
+🔍 Processing query: What were the incident rate ratios for food insecurity predicting depression symptoms in boys versus girls?
+📖 Retrieved 5 relevant chunks
+📊 TOKEN ANALYSIS:
+   • Context tokens: ~1,176
+   • Response tokens: ~106
+   • Total tokens: ~1,282
+
+🤖 **Answer** (Confidence: 0.62):
+--------------------------------------------------
+In boys, food insecurity was associated with higher depression symptoms (IRR = 1.52; CI95% = 1.17-1.99; p = .002). In girls, food insecurity was potentially associated with increased depression symptoms (IRR = 1.26; CI 95% = 1.00-1.60; p = 0.052). After including the mother's mental health in the models, food insecurity was potentially associated with depressive symptoms in girls (IRR = 2.58; CI95% = 0.99-6.71; p = .051).
+
+
+📚 **Sources** (5 chunks):
+1. article_3 - Score: 0.538
+2. article_3 - Score: 0.524
+3. article_3 - Score: 0.511
+4. article_3 - Score: 0.511
+5. article_3 - Score: 0.508
+
+============================================================
+🧪 TESTING LLAMAINDEX RAG PIPELINE
+============================================================
+🔍 Processing query: How does maternal mental health mediate the relationship between food insecurity and adolescent anxiety?
+📖 Retrieved 5 relevant chunks
+📊 TOKEN ANALYSIS:
+   • Context tokens: ~1,643
+   • Response tokens: ~177
+   • Total tokens: ~1,820
+
+🤖 **Answer** (Confidence: 0.68):
+--------------------------------------------------
+Maternal mental health mediates the relationship between food insecurity and adolescent anxiety. The study found that higher scores on the mother's mental well-being measure were significantly associated with a decrease in anxiety symptoms in both boys (β = -0.395, p < 0.001) and girls (β = -0.468, p < 0.001). Additionally, food insecurity was negatively associated with maternal mental well-being in both boys (β = -0.840, p < 0.001) and girls (β = -0.704, p < 0.001). This suggests that food insecurity impacts maternal mental health, which in turn affects adolescent mental health, indicating a potential indirect relationship between food insecurity and adolescent anxiety through maternal mental health.
+
+
+📚 **Sources** (5 chunks):
+1. article_3 - Score: 0.632
+2. article_3 - Score: 0.570
+3. article_3 - Score: 0.560
+4. article_3 - Score: 0.547
+5. article_3 - Score: 0.535
