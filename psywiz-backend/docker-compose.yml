@@ -1,0 +1,54 @@
+version: '3.8'
+
+services:
+  psywiz-backend:
+    build:
+      context: .
+      dockerfile: Dockerfile
+      target: base
+    container_name: psywiz-backend
+    ports:
+      - "8000:8000"
+    env_file:
+      - .env  # READ FROM .ENV FILE
+    environment:
+      # OVERRIDE CONTAINER-SPECIFIC PATHS
+      - VECTOR_DB_PATH=/app/vector_db
+      - MODEL_CACHE_PATH=/app/model_cache
+      - LOG_FILE=/app/logs/app.log
+      - HOST=0.0.0.0
+      - PORT=8000
+    volumes:
+      # Mount your EXISTING vector DB from D: drive
+      - D:/PsyWiz/vector_db:/app/vector_db
+      # Persistent model cache
+      - model_cache:/app/model_cache
+      # Logs
+      - logs:/app/logs
+    networks:
+      - psywiz-network
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8000/health"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 60s
+    deploy:
+      resources:
+        limits:
+          memory: 4G
+          cpus: '2.0'
+        reservations:
+          memory: 2G
+          cpus: '1.0'
+
+volumes:
+  model_cache:
+    driver: local
+  logs:
+    driver: local
+
+networks:
+  psywiz-network:
+    driver: bridge
