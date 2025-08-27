@@ -17,10 +17,10 @@ psywiz-backend/model_cache/
 backend/model_cache/
 
 # Vector Database (Can be large, regenerated)
-vector_db/
-*/vector_db/
-psywiz-backend/vector_db/
-backend/vector_db/
+# vector_db/
+# */vector_db/
+# psywiz-backend/vector_db/
+# backend/vector_db/
 
 # Logs
 logs/
