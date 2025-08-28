@@ -114,7 +114,7 @@ class RAGEngine:
             retrieved_docs, metadatas, similarities = self.vector_db.similarity_search(
                 query_embedding=query_embedding,
                 top_k=_top_k,
-                similarity_threshold=_threshold
+                similarity_threshold= 0.3  #_threshold SIMILARITY THRESHOLD SET HERE
             )
             
             if not retrieved_docs:

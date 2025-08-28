@@ -50,9 +50,9 @@ async def ask_question(
             question=request.question,
             include_sources=request.include_sources,
             top_k=getattr(request, 'top_k', None),
-            similarity_threshold=getattr(request, 'similarity_threshold', None),
+            similarity_threshold=getattr(request, 'similarity_threshold', 0.3),
             max_context_length=getattr(request, 'max_context_length', None),
-            temperature=getattr(request, 'temperature', 0.7),
+            temperature=getattr(request, 'temperature', 0.3),
             custom_context=getattr(request, 'custom_context', None)
         )
         

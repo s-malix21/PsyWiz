@@ -120,7 +120,7 @@ class VectorDatabase:
         self,
         query_embedding: List[float],
         top_k: int = 5,
-        similarity_threshold: float = 0.7,
+        similarity_threshold: float = 0.3,
         metadata_filter: Optional[Dict[str, Any]] = None
     ) -> Tuple[List[str], List[Dict[str, Any]], List[float]]:
         """Search for similar documents."""

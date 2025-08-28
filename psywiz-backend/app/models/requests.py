@@ -75,9 +75,9 @@ class RAGQueryRequest(BaseModel):
                 "question": "What are the main findings about diabetes treatment?",
                 "include_sources": True,
                 "top_k": 5,
-                "similarity_threshold": 0.7,
+                "similarity_threshold": 0.3,
                 "llm_model": "gemini",
-                "temperature": 0.7
+                "temperature": 0.3
             }
         }
     }
@@ -121,8 +121,8 @@ class ConfigUpdateRequest(BaseModel):
                 "chunk_size": 512,
                 "chunk_overlap": 50,
                 "top_k_retrieval": 5,
-                "similarity_threshold": 0.7,
-                "temperature": 0.7
+                "similarity_threshold": 0.3,
+                "temperature": 0.3
             }
         }
     }
