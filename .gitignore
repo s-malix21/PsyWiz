@@ -1,0 +1,91 @@
+# Environment Variables
+.env
+.env.local
+.env.development
+.env.production
+.env.test
+*.env
+
+# Backend specific
+psywiz-backend/.env
+backend/.env
+
+# Model Cache (Large files - should not be in git)
+model_cache/
+*/model_cache/
+psywiz-backend/model_cache/
+backend/model_cache/
+
+# Vector Database (Can be large, regenerated)
+# vector_db/
+# */vector_db/
+# psywiz-backend/vector_db/
+# backend/vector_db/
+
+# Logs
+logs/
+*.log
+psywiz-backend/logs/
+backend/logs/
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+pip-wheel-metadata/
+share/python-wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# Virtual Environments
+venv/
+env/
+ENV/
+.venv/
+.env/
+
+# Jupyter Notebooks (if you want to exclude checkpoints)
+# .ipynb_checkpoints
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Docker
+.dockerignore
+
+# Node.js (for future frontend)
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.next/
+out/
